@@ -263,41 +263,75 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x BOR4V = BOR40V ]
 "18
 [p x WRT = OFF ]
-"12 display7seg.c
-[; ;display7seg.c: 12: void display7seg_init(void)
+"14 display7seg.c
+[; ;display7seg.c: 14: char vetor[16] = { 0x3F, 0x06, 0x5B, 0x4F,
+[v _vetor `uc ~T0 @X0 -> 16 `i e ]
+[i _vetor
+:U ..
+-> -> 63 `i `uc
+-> -> 6 `i `uc
+-> -> 91 `i `uc
+-> -> 79 `i `uc
+-> -> 102 `i `uc
+-> -> 109 `i `uc
+-> -> 125 `i `uc
+-> -> 7 `i `uc
+-> -> 127 `i `uc
+-> -> 111 `i `uc
+-> -> 119 `i `uc
+-> -> 124 `i `uc
+-> -> 57 `i `uc
+-> -> 94 `i `uc
+-> -> 121 `i `uc
+-> -> 113 `i `uc
+..
+]
+"19
+[; ;display7seg.c: 19: void display7seg_init( void )
 [v _display7seg_init `(v ~T0 @X0 1 ef ]
-"13
-[; ;display7seg.c: 13: {
+"20
+[; ;display7seg.c: 20: {
 {
 [e :U _display7seg_init ]
 [f ]
-"14
-[; ;display7seg.c: 14:     TRISD = 0x00;
+"21
+[; ;display7seg.c: 21:     TRISD = 0x00;
 [e = _TRISD -> -> 0 `i `uc ]
-"15
-[; ;display7seg.c: 15:     PORTD = 0x00;
+"22
+[; ;display7seg.c: 22:     PORTD = 0x00;
 [e = _PORTD -> -> 0 `i `uc ]
-"16
-[; ;display7seg.c: 16: }
+"23
+[; ;display7seg.c: 23: }
 [e :UE 138 ]
 }
-"18
-[; ;display7seg.c: 18: void display7seg (int c)
+"25
+[; ;display7seg.c: 25: void display7seg( int c )
 [v _display7seg `(v ~T0 @X0 1 ef1`i ]
-"19
-[; ;display7seg.c: 19: {
+"26
+[; ;display7seg.c: 26: {
 {
 [e :U _display7seg ]
-"18
-[; ;display7seg.c: 18: void display7seg (int c)
+"25
+[; ;display7seg.c: 25: void display7seg( int c )
 [v _c `i ~T0 @X0 1 r1 ]
-"19
-[; ;display7seg.c: 19: {
+"26
+[; ;display7seg.c: 26: {
 [f ]
-"20
-[; ;display7seg.c: 20:     PORTD = c;
-[e = _PORTD -> _c `uc ]
-"21
-[; ;display7seg.c: 21: }
+"27
+[; ;display7seg.c: 27:     if( c >= 0 && c <= 15 )
+[e $ ! && >= _c -> 0 `i <= _c -> 15 `i 140  ]
+"28
+[; ;display7seg.c: 28:         PORTD = vetor[c];
+[e = _PORTD -> *U + &U _vetor * -> -> _c `ui `ux -> -> # *U &U _vetor `ui `ux `uc ]
+[e $U 141  ]
+"29
+[; ;display7seg.c: 29:     else
+[e :U 140 ]
+"30
+[; ;display7seg.c: 30:         PORTD = 0x00;
+[e = _PORTD -> -> 0 `i `uc ]
+[e :U 141 ]
+"31
+[; ;display7seg.c: 31: }
 [e :UE 139 ]
 }

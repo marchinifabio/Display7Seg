@@ -13,35 +13,35 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"12 Z:\Display7seg\Display7Seg\display7seg.X\display7seg.c
+"19 Z:\Display7seg\Display7Seg\display7seg.X\display7seg.c
 [v _display7seg_init display7seg_init `(v  1 e 1 0 ]
-"18
+"25
 [v _display7seg display7seg `(v  1 e 1 0 ]
-"22 Z:\Display7seg\Display7Seg\display7seg.X\main.c
+"17 Z:\Display7seg\Display7Seg\display7seg.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "352 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
 "1602
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
-"14 Z:\Display7seg\Display7Seg\display7seg.X\main.c
+"14 Z:\Display7seg\Display7Seg\display7seg.X\display7seg.c
 [v _vetor vetor `[16]uc  1 e 16 0 ]
-"22
+"17 Z:\Display7seg\Display7Seg\display7seg.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"24
-[v main@cont cont `i  1 a 2 5 ]
-"35
+"19
+[v main@cont cont `i  1 a 2 3 ]
+"29
 } 0
-"12 Z:\Display7seg\Display7Seg\display7seg.X\display7seg.c
+"19 Z:\Display7seg\Display7Seg\display7seg.X\display7seg.c
 [v _display7seg_init display7seg_init `(v  1 e 1 0 ]
 {
-"16
+"23
 } 0
-"18
+"25
 [v _display7seg display7seg `(v  1 e 1 0 ]
 {
 [v display7seg@c c `i  1 p 2 0 ]
-"21
+"31
 } 0
 "11 Z:/Partida-estela-triangulo-ME/Partidaestrelatriangulome.X/delay.c
 [v _delay delay `(v  1 e 1 0 ]

@@ -12,6 +12,8 @@
 #include "display7seg.h"
 
 
+
+
 void main(void) 
 {
     int cont = 0;
@@ -20,8 +22,8 @@ void main(void)
     {
         display7seg( cont );
         delay( 1000 );
-        cont++;
-        if( cont >= 16 )
+        ++cont;
+        if( cont >= 20 )
             cont = 0;
     }
 }
