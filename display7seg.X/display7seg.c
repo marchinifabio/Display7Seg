@@ -22,5 +22,5 @@ void display7seg_init(void)
 
 void display7seg (int c)
 {
-    PORTD = c;
+    PORTD = vetor[c];
 }
